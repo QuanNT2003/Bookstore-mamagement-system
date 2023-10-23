@@ -1,0 +1,29 @@
+.Product{
+    background-color: #E5E5E5;
+}
+
+.content{
+    background: 
+    url(/src/Assets/imges/frame.png) top no-repeat fixed;
+    background-size: 100%;
+
+    
+}
+.header{
+    background: white;
+    height: 60px;
+}
+.title{
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 600 ;
+    align-items: center;
+    
+}
+
+.toolbar{
+    border-radius: 10px;
+    margin: 30px 15px;
+    background: white;
+    padding: 10px;
+}

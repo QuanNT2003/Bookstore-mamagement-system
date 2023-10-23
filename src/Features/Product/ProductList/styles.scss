@@ -1,0 +1,40 @@
+.ProductList{
+    
+}
+
+.ProductItem{
+    border-bottom: 1px groove ;
+    
+}
+
+.loai{
+    background: #a8b2e3 ;
+    padding: 3px 10px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+
+.available{
+    padding: 3px 5px;
+    background: #ECFDF3;
+    color: #027A48;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+
+}
+
+.nonavailable{
+    padding: 3px 5px;
+    background: #FEF3F2;
+    color: #B42318;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+
+

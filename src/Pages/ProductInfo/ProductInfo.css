@@ -1,0 +1,84 @@
+.ProductInfo{
+    background-color: #E5E5E5;
+    font-size: 14px;
+    color: black;
+}
+
+.content{
+    background: 
+    url(/src/Assets/imges/frame.png) top no-repeat fixed;
+    background-size: 100%;
+
+    
+}
+.header{
+    background: white;
+    height: 60px;
+}
+
+.title{
+    color:#A9A9A9 ;
+    text-decoration: none;
+    font-size: 15px;
+    padding-top: 30px;
+}
+
+.content-info{
+    background: white;
+    border-radius: 10px;
+    margin: 30px 20px;
+    padding: 50px 30px;
+    font-size: 0.8rem;
+
+}
+
+.frame{
+    border: 3px groove;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    
+}
+
+.frame-title {
+    font-weight: 500;
+    margin: 10px 5px;
+}
+
+.img-big{
+    height: 180px;
+    width: 220px;
+    margin: 10px 20px;
+}
+
+.img-small{
+    height: 36px;
+    width: 40px;
+    margin: 10px 5px;
+    padding: 0;
+}
+
+.img-barcode{
+    height: 40px;
+    width: 220px;
+}
+
+.specifications{
+    background: #CDCDCD;
+    padding: 10px 10px;
+    margin-right: 10px;
+}
+
+.frame-info{
+    font-weight: bold;
+}
+
+.properties{
+    color: #00000076;
+}
+
+.my-btn{
+    width: 120px;
+    height:40px;
+    font-size: 15px;
+}
+

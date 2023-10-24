@@ -18,3 +18,13 @@
 a{
     width: 90%;
 }
+
+.my-navlink{
+    text-decoration: none;
+    color: black;
+}
+
+.navlink-active{
+    background-color:  #3A57E8;
+
+}

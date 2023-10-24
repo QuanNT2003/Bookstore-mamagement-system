@@ -15,53 +15,48 @@ export default function Product() {
     return (
         <div className="Product">
             <Container fluid className='w-100'>
-                <Row>
-                    <Col xs={4} md={2} className='p-0'>
-                        <MenuBar />
-                    </Col>
-                    <Col xs={8} md={10} className='content'>
-                        <div>
-                            <Row className='header'>
-                                <Col xs md={9}>
-                                    <p className='title'>
-                                        Danh sách sản phẩm
-                                    </p>
-                                </Col>
+                <Row className='content'>
+                    <div>
+                        <Row className='header'>
+                            <Col xs md={9}>
+                                <p className='title pt-3'>
+                                    Danh sách sản phẩm
+                                </p>
+                            </Col>
 
-                                <Col xs md={3}>
-                                    <Header />
-                                </Col>
-                            </Row>
-                        </div>
+                            <Col xs md={3}>
+                                <Header />
+                            </Col>
+                        </Row>
+                    </div>
 
-                        <div >
-                            <Row className='toolbar'>
-                                <Col xs md={10}>
-                                    <Button variant="primary" className='me-3'>
-                                        <FaFilePen className='me-2' />
-                                        Nhập file
-                                    </Button>{' '}
-                                    <Button variant="primary" className='me-3'>
-                                        <FaPrint className='me-2' />
-                                        Xuất file
-                                    </Button>{' '}
-                                    <Button variant="primary" className='me-3'>
-                                        <FaListUl className='me-2' />
-                                        Loại sản phẩm
-                                    </Button>{' '}
-                                </Col>
+                    <div >
+                        <Row className='toolbar'>
+                            <Col xs md={10}>
+                                <Button variant="primary" className='me-3'>
+                                    <FaFilePen className='me-2' />
+                                    Nhập file
+                                </Button>{' '}
+                                <Button variant="primary" className='me-3'>
+                                    <FaPrint className='me-2' />
+                                    Xuất file
+                                </Button>{' '}
+                                <Button variant="primary" className='me-3'>
+                                    <FaListUl className='me-2' />
+                                    Loại sản phẩm
+                                </Button>{' '}
+                            </Col>
 
-                                <Col xs md={2}>
-                                    <Button variant="primary" className='text-end'>
-                                        <FaCirclePlus className='me-2' />
-                                        Thêm sản phẩm
-                                    </Button>{' '}
-                                </Col>
-                            </Row>
+                            <Col xs md={2}>
+                                <Button variant="primary" className='text-end'>
+                                    <FaCirclePlus className='me-2' />
+                                    Thêm sản phẩm
+                                </Button>{' '}
+                            </Col>
+                        </Row>
 
-                            <ProductFeatures />
-                        </div>
-                    </Col>
+                        <ProductFeatures />
+                    </div>
                 </Row>
             </Container>
         </div>

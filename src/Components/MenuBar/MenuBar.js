@@ -11,9 +11,10 @@ import { FaUser } from 'react-icons/fa6'
 import { FaUsers } from 'react-icons/fa6'
 import Accordion from 'react-bootstrap/Accordion';
 import logo from '../../Assets/imges/logo.png';
+import { Route, NavLink } from 'react-router-dom';
 
 export default function MenuBar() {
-
+    const navlink_active = ({ isActive }) => (isActive ? "navlink-active" : "");
 
     return (
         <div className="MenuBar">
@@ -26,7 +27,7 @@ export default function MenuBar() {
                     </Col>
 
                     <Col xs md={10} className='text-start ps-0'>
-                        Tổng quan
+                        <NavLink to="/overview" className="my-navlink" >Tổng quan</NavLink>
                     </Col>
                 </Row>
 
@@ -49,12 +50,17 @@ export default function MenuBar() {
                         </Row>
                         </Accordion.Header>
                         <Accordion.Body>
-                            <a class="btn text-wrap text-start" href="#">
-                                Trang chủ
-                            </a>
-                            <a class="btn text-wrap text-start" href='#'>
-                                Trang chủ
-                            </a>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
+
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
                         </Accordion.Body>
                     </Accordion.Item>
 
@@ -78,21 +84,32 @@ export default function MenuBar() {
                         </Row>
                         </Accordion.Header>
                         <Accordion.Body>
-                            <a class="btn pb-2 text-wrap text-start" href='#'>
-                                Danh sách sản phẩm
-                            </a>
-                            <a class="btn pb-2 text-wrap text-start" href='#'>
-                                Quản lý kho
-                            </a>
-                            <a class="btn pb-2 text-wrap text-start" href='#'>
-                                Nhập hàng
-                            </a>
-                            <a class="btn pb-2 text-wrap text-start" href='#'>
-                                Kiểm hàng
-                            </a>
-                            <a class="btn pb-2 text-wrap text-start" href='#'>
-                                Nhà cung cấp
-                            </a>
+                            <NavLink to="/product" >
+                                <a class="btn pb-2 text-wrap text-start" href='#'>
+                                    Danh sách sản phẩm
+                                </a>
+                            </NavLink>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Quản lý kho
+                                </a>
+                            </NavLink>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Nhập hàng
+                                </a>
+                            </NavLink>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Kiểm hàng
+                                </a>
+                            </NavLink>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Nhà cung cấp
+                                </a>
+                            </NavLink>
+
                         </Accordion.Body>
                     </Accordion.Item>
 
@@ -117,12 +134,16 @@ export default function MenuBar() {
                         </Row>
                         </Accordion.Header>
                         <Accordion.Body>
-                            <a class="btn text-wrap text-start" href="#">
-                                Trang chủ
-                            </a>
-                            <a class="btn text-wrap text-start" href='#'>
-                                Trang chủ
-                            </a>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
                         </Accordion.Body>
                     </Accordion.Item>
 
@@ -146,12 +167,16 @@ export default function MenuBar() {
                         </Row>
                         </Accordion.Header>
                         <Accordion.Body>
-                            <a class="btn text-wrap text-start" href="#">
-                                Trang chủ
-                            </a>
-                            <a class="btn text-wrap text-start" href='#'>
-                                Trang chủ
-                            </a>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
                         </Accordion.Body>
                     </Accordion.Item>
 
@@ -175,12 +200,16 @@ export default function MenuBar() {
                         </Row>
                         </Accordion.Header>
                         <Accordion.Body>
-                            <a class="btn text-wrap text-start" href="#">
-                                Trang chủ
-                            </a>
-                            <a class="btn text-wrap text-start" href='#'>
-                                Trang chủ
-                            </a>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
                         </Accordion.Body>
                     </Accordion.Item>
 
@@ -204,12 +233,16 @@ export default function MenuBar() {
                         </Row>
                         </Accordion.Header>
                         <Accordion.Body>
-                            <a class="btn text-wrap text-start" href="#">
-                                Trang chủ
-                            </a>
-                            <a class="btn text-wrap text-start" href='#'>
-                                Trang chủ
-                            </a>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
                         </Accordion.Body>
                     </Accordion.Item>
 
@@ -232,12 +265,16 @@ export default function MenuBar() {
                         </Row>
                         </Accordion.Header>
                         <Accordion.Body>
-                            <a class="btn text-wrap text-start" href="#">
-                                Trang chủ
-                            </a>
-                            <a class="btn text-wrap text-start" href='#'>
-                                Trang chủ
-                            </a>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
                         </Accordion.Body>
                     </Accordion.Item>
 
@@ -261,12 +298,16 @@ export default function MenuBar() {
                         </Row>
                         </Accordion.Header>
                         <Accordion.Body>
-                            <a class="btn text-wrap text-start" href="#">
-                                Trang chủ
-                            </a>
-                            <a class="btn text-wrap text-start" href='#'>
-                                Trang chủ
-                            </a>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
+                            <NavLink>
+                                <a class="btn text-wrap text-start" href="#">
+                                    Trang chủ
+                                </a>
+                            </NavLink>
                         </Accordion.Body>
                     </Accordion.Item>
 

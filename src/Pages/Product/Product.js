@@ -1,4 +1,3 @@
-import MenuBar from '../../Components/MenuBar/MenuBar';
 import Header from '../../Components/Header/Header';
 import ProductFeatures from '../../Features/Product/ProductFeatures';
 import Container from 'react-bootstrap/Container';

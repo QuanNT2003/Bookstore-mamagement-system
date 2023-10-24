@@ -1,5 +1,6 @@
 .Product{
     background-color: #E5E5E5;
+    color: black;
 }
 
 .content{
@@ -15,8 +16,9 @@
 }
 .title{
     font-size: 30px;
-    font-weight: 600 ;
+    font-weight: 700 ;
     align-items: center;
+ 
 }
 
 .toolbar{

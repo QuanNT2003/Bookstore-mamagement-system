@@ -1,38 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles.scss';
-import Container from 'react-bootstrap/Container';
+import { useState, useEffect } from 'react';
+import Pagination from 'react-bootstrap/Pagination';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import { FaCheck } from 'react-icons/fa6'
-import { FaXmark } from 'react-icons/fa6'
-import { useState, useEffect } from 'react';
-import Pagination from 'react-bootstrap/Pagination';
-
-ProductList.propTypes = {
-    productList: PropTypes.array.isRequired,
+import Container from 'react-bootstrap/Container';
+import './style.scss';
+ProductTypeList.propTypes = {
+    productTypeList: PropTypes.array.isRequired,
 };
 
-
-
-
-
-function ProductList({ productList }) {
-    const [products, setProduct] = useState([]);
+function ProductTypeList({ productTypeList }) {
+    const [producttypes, setProducttype] = useState([]);
     const [PerPage, setPerPage] = useState(7);
     const [currentPage, setcurrentPage] = useState(1);
 
-    const numofTotalPage = Math.ceil(products.length / PerPage);
+    const numofTotalPage = Math.ceil(producttypes.length / PerPage);
     const pages = [...Array(numofTotalPage + 1).keys()].slice(1);
 
     const indexOflastPd = currentPage * PerPage;
     const indexOffirstPd = indexOflastPd - PerPage;
 
-    const visible = products.slice(indexOffirstPd, indexOflastPd);
+    const visible = producttypes.slice(indexOffirstPd, indexOflastPd);
 
     useEffect(() => {
-        setProduct(productList);
+        setProducttype(productTypeList);
     })
 
     const prevPage = () => {
@@ -42,58 +35,35 @@ function ProductList({ productList }) {
     const nextPage = () => {
         if (currentPage !== numofTotalPage) setcurrentPage(currentPage + 1);
     }
+
     return (
-        <div>
+        <div className='producttype-list'>
             {
-                visible.map(product => (
-                    <div key={product.id} className='ProductItem pb-2'>
+                visible.map(type => (
+                    <div key={type.id} className=' pb-2 productTypeItem'>
                         <Row className='mt-2 '>
                             <Col xs md={1} className='p-4 mt-2'><Form.Check aria-label="option 1" /></Col>
-                            <Col xs md={4} className='p-1 mt-2'>
+                            <Col xs md={5} className='p-1 mt-2'>
                                 <Container>
                                     <Row>
-                                        <Col xs md={3} className='ps-0'>
-                                            <img src={product.img} className='h-100 w-75' alt=''></img>
-                                        </Col>
                                         <Col xs md={9}>
-                                            <p className='mb-2 typeid'>{product.idpd}</p>
-                                            <p className='mb-2'>{product.name}</p>
+                                            <p className='mb-2 typeid'>{type.idtype}</p>
+                                            <p className='mb-2'>{type.name}</p>
                                         </Col>
                                     </Row>
 
                                 </Container>
                             </Col>
-                            {product.status === 1 ? (
-                                <Col xs md={1} className=' mt-2'  >
-                                    <div className='available'>
-                                        <FaCheck />
-                                        Đang giao dịch
-                                    </div>
-
-                                </Col>
-                            ) : (
-                                <Col xs md={1} className=' mt-2'  >
-                                    <div className='nonavailable'>
-                                        <FaXmark />
-                                        Ngừng giao dịch
-                                    </div>
 
 
-                                </Col>
-                            )}
 
-                            <Col xs md={1} className='p-1 mt-2'><span className='stype'> {product.loai}</span></Col>
-                            <Col xs md={1} className='p-1 mt-2'>{product.nhom}</Col>
-                            <Col xs md={1} className='p-1 mt-2'>{product.giaban}</Col>
-                            <Col xs md={1} className='p-1 mt-2'>{product.giavon}</Col>
-                            <Col xs md={1} className='p-1 mt-2'>{product.tonkho}</Col>
-                            <Col xs md={1} className='p-1 mt-2'>{product.ngaytao}</Col>
+                            <Col xs md={5} className='p-1 mt-2'>{type.note}</Col>
+                            <Col xs md={1} className='p-1 mt-2'>{type.date}</Col>
                         </Row>
                     </div>
                 ))
-
-
             }
+
             <Row className='mt-3 me-3'>
                 <Col xs md={8} className='d-flex  justify-content-end'>
 
@@ -126,13 +96,8 @@ function ProductList({ productList }) {
                 </Col>
             </Row>
 
-
-
-
-
-
         </div>
     );
 }
 
-export default ProductList;
+export default ProductTypeList;

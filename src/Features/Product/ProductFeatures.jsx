@@ -107,7 +107,7 @@ function ProductFeatures(props) {
                         <Form.Control
                             aria-label="Example text with button addon"
                             aria-describedby="basic-addon1"
-                            placeholder="Recipient's username"
+                            placeholder="Nhap ten hoac ma san pham"
                         />
                     </InputGroup>
 

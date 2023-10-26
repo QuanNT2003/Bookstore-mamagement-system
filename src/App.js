@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import Overview from './Pages/Overview/Overview';
 import Product from './Pages/Product/Product';
+import ProductAdd from './Pages/AddProduct/AddProduct';
+import ProductType from './Pages/ProductType/ProductType';
 import './App.css';
 function App() {
   return (
@@ -17,8 +19,12 @@ function App() {
           </Col>
           <Col xs={8} md={10} className='content p-0'>
             <Routes>
+
+              <Route path='/' Component={Overview} />
               <Route path='/overview' Component={Overview} />
               <Route path='/product' Component={Product} />
+              <Route path='/product/add' Component={ProductAdd} />
+              <Route path='/product_type' Component={ProductType} />
             </Routes>
 
 

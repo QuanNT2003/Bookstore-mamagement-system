@@ -10,6 +10,7 @@ import { FaFilePen } from 'react-icons/fa6'
 import { FaPrint } from 'react-icons/fa6'
 import { FaListUl } from 'react-icons/fa6'
 import { FaCirclePlus } from 'react-icons/fa6'
+import { Route, NavLink } from 'react-router-dom';
 export default function Product() {
     return (
         <div className="Product">
@@ -42,14 +43,15 @@ export default function Product() {
                                 </Button>{' '}
                                 <Button variant="primary" className='me-3'>
                                     <FaListUl className='me-2' />
-                                    Loại sản phẩm
+                                    <NavLink to="/product_type" className="text-decoration-none text-white" >Loại sản phẩm</NavLink>
                                 </Button>{' '}
                             </Col>
 
                             <Col xs md={2}>
                                 <Button variant="primary" className='text-end'>
                                     <FaCirclePlus className='me-2' />
-                                    Thêm sản phẩm
+                                    <NavLink to="/product/add" className="text-decoration-none text-white" >Thêm sản phẩm</NavLink>
+
                                 </Button>{' '}
                             </Col>
                         </Row>

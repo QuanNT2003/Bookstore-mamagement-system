@@ -99,7 +99,7 @@ function ProductFeatures(props) {
     return (
         <div className='ProductFeatures'>
             <Row>
-                <Col xs md={6}>
+                <Col xs md={5}>
                     <InputGroup className="mb-3 mt-3 ms-3 w-75">
                         <Button variant="outline-secondary" id="button-addon1">
                             <FaSearch />
@@ -107,7 +107,7 @@ function ProductFeatures(props) {
                         <Form.Control
                             aria-label="Example text with button addon"
                             aria-describedby="basic-addon1"
-                            placeholder="Nhap ten hoac ma san pham"
+                            placeholder="Tìm kiếm theo tên hoặc mã sản phẩm"
                         />
                     </InputGroup>
 
@@ -116,32 +116,33 @@ function ProductFeatures(props) {
 
 
                 </Col>
-                <Col xs md={6}>
+                <Col xs md={7}>
                     <Row className='mt-3 ms-3'>
-                        <Col xs md={3}></Col>
-                        <Col xs md={3}>
-                            <Form.Select aria-label="Default select example" placeholder='Ngay tao' className=' w-75'>
+                        <Col xs md={4}>
+                            <Form.Select aria-label="Default select example" placeholder='Ngay tao' className='myform--select'>
+                                <option selected disabled>Chọn ngày tạo</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
                             </Form.Select>
                         </Col>
-                        <Col xs md={3}>
-                            <Form.Select aria-label="Default select example" placeholder='Loai san pham' className=' w-75'>
+                        <Col xs md={4}>
+                            <Form.Select aria-label="Default select example" placeholder='Loai san pham' className=' myform--select'>
+                                <option selected disabled>Chọn loại sản phẩm</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </Form.Select>
+                        </Col>
+                        <Col xs md={4}>
+                            <Form.Select aria-label="Default select example" placeholder='Nhom san pham' className=' myform--select'>
+                                <option selected disabled>Chọn nhóm sản phẩm</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </Form.Select>
+                        </Col>
 
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </Form.Select>
-                        </Col>
-                        <Col xs md={3}>
-                            <Form.Select aria-label="Default select example" placeholder='Nhom san pham' className=' w-75'>
-
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </Form.Select>
-                        </Col>
                     </Row>
 
 

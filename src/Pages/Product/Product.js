@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../Product/Product.css'
+import '../Product/Product.css';
 import { FaFilePen } from 'react-icons/fa6'
 import { FaPrint } from 'react-icons/fa6'
 import { FaListUl } from 'react-icons/fa6'

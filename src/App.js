@@ -26,7 +26,7 @@ function App() {
               <Route path='/product' Component={Product} />
               <Route path='/product/add' Component={ProductAdd} />
               <Route path='/product_type' Component={ProductType} />
-              <Route path='/product_info/:id' Component={ProductInfo} />
+              <Route path='/product_info/:productid' Component={ProductInfo} />
             </Routes>
 
 

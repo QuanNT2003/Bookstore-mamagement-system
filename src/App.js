@@ -8,6 +8,7 @@ import Overview from './Pages/Overview/Overview';
 import Product from './Pages/Product/Product';
 import ProductAdd from './Pages/AddProduct/AddProduct';
 import ProductType from './Pages/ProductType/ProductType';
+import ProductInfo from './Pages/ProductInfo/ProductInfo';
 import './App.css';
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route path='/product' Component={Product} />
               <Route path='/product/add' Component={ProductAdd} />
               <Route path='/product_type' Component={ProductType} />
+              <Route path='/product_info/:id' Component={ProductInfo} />
             </Routes>
 
 

@@ -9,9 +9,13 @@ import Image from 'react-bootstrap/Image';
 import Sample from '../../Assets/imges/sample.jpg';
 import Barcose from '../../Assets/imges/ma_vach.jpg';
 import Button from 'react-bootstrap/Button';
-
+import queryString from 'query-string';
+import { useLocation } from 'react-router-dom';
 
 export default function ProductInfo() {
+    const location = useLocation();
+    const params = queryString.parse(location.search);
+    console.log(params);
     return (
         <div className='ProductInfo' title='Thông tin sản phẩm '>
             <Container fluid className='w-100'>

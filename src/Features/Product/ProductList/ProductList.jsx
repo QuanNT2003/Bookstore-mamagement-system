@@ -9,6 +9,7 @@ import { FaCheck } from 'react-icons/fa6'
 import { FaXmark } from 'react-icons/fa6'
 import { useState, useEffect } from 'react';
 import Pagination from 'react-bootstrap/Pagination';
+import { NavLink } from 'react-router-dom';
 
 ProductList.propTypes = {
     productList: PropTypes.array.isRequired,
@@ -49,7 +50,7 @@ function ProductList({ productList }) {
                     <div key={product.id} className='ProductItem pb-2'>
                         <Row className='mt-2 '>
                             <Col xs md={1} className='p-4 mt-2'><Form.Check aria-label="option 1" /></Col>
-                            <Col xs md={4} className='p-1 mt-2'>
+                            <Col xs md={3} className='p-1 mt-2'>
                                 <Container>
                                     <Row>
                                         <Col xs md={3} className='ps-0'>
@@ -82,12 +83,13 @@ function ProductList({ productList }) {
                                 </Col>
                             )}
 
-                            <Col xs md={1} className='p-1 mt-2'><span className='stype'> {product.loai}</span></Col>
+                            <Col xs md={2} className='p-1 mt-2 text-center'><span className='stype'> {product.loai}</span></Col>
                             <Col xs md={1} className='p-1 mt-2'>{product.nhom}</Col>
                             <Col xs md={1} className='p-1 mt-2'>{product.giaban}</Col>
                             <Col xs md={1} className='p-1 mt-2'>{product.giavon}</Col>
                             <Col xs md={1} className='p-1 mt-2'>{product.tonkho}</Col>
                             <Col xs md={1} className='p-1 mt-2'>{product.ngaytao}</Col>
+                            {/* <Col><NavLink to={"/product_info/" + product.id} className="text-decoration-none text-white" >Xem sản phẩm</NavLink></Col> */}
                         </Row>
                     </div>
                 ))
@@ -98,9 +100,10 @@ function ProductList({ productList }) {
                 <Col xs md={8} className='d-flex  justify-content-end'>
 
                     <p className='mt-3'>Chọn số lượng</p>
-                    <Form.Select aria-label="Default select example" placeholder='Loai san pham' className='ms-2 form-select' onChange={(e) => {
-                        setPerPage(e.target.value)
-                    }}>
+                    <Form.Select aria-label="Default select example" placeholder='Loai san pham' className='ms-2 form-select'
+                        onChange={(e) => {
+                            setPerPage(e.target.value)
+                        }}>
 
                         <option value="1">1</option>
                         <option value="2">2</option>

@@ -89,7 +89,7 @@ function ProductList({ productList }) {
                             <Col xs md={1} className='p-1 mt-2'>{product.giavon}</Col>
                             <Col xs md={1} className='p-1 mt-2'>{product.tonkho}</Col>
                             <Col xs md={1} className='p-1 mt-2'>{product.ngaytao}</Col>
-                            <Col><NavLink to={"/product/info/" + product.id} className="text-decoration-none text-white" >Xem sản phẩm</NavLink></Col>
+                            {/* <Col><NavLink to={"/product/info/" + product.id} className="text-decoration-none text-white" >Xem sản phẩm</NavLink></Col> */}
                         </Row>
                     </div>
                 ))

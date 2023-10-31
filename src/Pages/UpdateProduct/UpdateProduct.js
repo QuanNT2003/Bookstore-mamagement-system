@@ -7,9 +7,15 @@ import { FaAngleLeft } from 'react-icons/fa6';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FaCirclePlus } from 'react-icons/fa6'
-import Logo from '../../Assets/imges/sample.jpg'
+import DuyKhiem from '../../Assets/imges/sample.jpg'
+import Logo from '../../Assets/imges/logo.png'
 import { useState, useEffect } from 'react';
-export default function ProductAdd() {
+import { useParams } from 'react-router-dom';
+export default function UpdateProduct() {
+
+    const { productid } = useParams()
+    console.log({ productid })
+
     const [arrayimage, setArrayimage] = useState([
         {
             id: 1,
@@ -18,7 +24,7 @@ export default function ProductAdd() {
         },
         {
             id: 2,
-            image: Logo,
+            image: DuyKhiem,
             filename: "No file select"
         },
         {
@@ -33,6 +39,8 @@ export default function ProductAdd() {
         }
     ])
 
+    const [chophep, setchophep] = useState(true);
+    const [name, setname] = useState("Sách giáo khoa lớp 7");
 
     const updateFieldChanged = (name, index, value) => {
         let newArr = [...arrayimage]; // copying the old datas array
@@ -40,11 +48,8 @@ export default function ProductAdd() {
         setArrayimage(newArr);
         console.log(arrayimage)
     };
-
-
-
     return (
-        <div className='AddProduct'>
+        < div className='AddProduct' >
             <Container fluid className='w-100'>
                 <Row>
                     <div>
@@ -62,7 +67,7 @@ export default function ProductAdd() {
                         </Row>
 
                         <Row className='ms-2 mt-2 text-white fs-1'>
-                            Thêm sản phẩm
+                            Chỉnh sửa sản phẩm
                         </Row>
 
                         <Row className='content-info'>
@@ -116,7 +121,7 @@ export default function ProductAdd() {
                                     <Form className='mx-4'>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                             <Form.Label className='attribute-name'>Tên sản phẩm</Form.Label>
-                                            <Form.Control placeholder="Nhập tên sản phẩm" />
+                                            <Form.Control placeholder="Nhập tên sản phẩm" defaultValue={name} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
                                             <Form.Label className='attribute-name'>Vị trí</Form.Label>
@@ -191,7 +196,7 @@ export default function ProductAdd() {
                                             <Row className='ms-3 mb-3 frame-title' > Thông tin bổ sung</Row>
                                             <div className='mb-3'>
                                                 <p className='ms-3  mb-1 attribute-name'>Loại sản phẩm</p>
-                                                <Form.Select aria-label="Default select example" className='ms-3 myform-select '>
+                                                <Form.Select aria-label="Default select example" className='ms-3 myform-select ' defaultValue={"2"}>
                                                     <option selected disabled={true}>Chọn loại sản phẩm</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
@@ -237,6 +242,7 @@ export default function ProductAdd() {
                                                         <Form.Check
                                                             type="switch"
                                                             id="custom-switch"
+                                                            defaultChecked={chophep}
                                                         />
                                                     </Form>
                                                 </Col>
@@ -278,6 +284,8 @@ export default function ProductAdd() {
                     </div>
                 </Row>
             </Container>
-        </div>
+        </div >
     )
+
+
 }

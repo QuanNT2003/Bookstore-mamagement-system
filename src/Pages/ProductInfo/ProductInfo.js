@@ -10,7 +10,7 @@ import Sample from '../../Assets/imges/sample.jpg';
 import Barcose from '../../Assets/imges/ma_vach.jpg';
 import Button from 'react-bootstrap/Button';
 import { useParams } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 export default function ProductInfo() {
 
 
@@ -194,7 +194,7 @@ export default function ProductInfo() {
                                 <Col className='mt-4 text-end'>
                                     <Button className='my-btn' variant="outline-primary">Thoát</Button>{' '}
                                     <Button className='my-btn' variant="outline-danger">Xóa</Button>{' '}
-                                    <Button className='my-btn' variant="primary">Sửa sản phẩm </Button>{' '}
+                                    <Button className='my-btn' variant="primary"><NavLink to={"/product/update/" + productid} className="text-decoration-none text-white" >Sửa sản phẩm</NavLink></Button>{' '}
                                 </Col>
 
                             </Row>

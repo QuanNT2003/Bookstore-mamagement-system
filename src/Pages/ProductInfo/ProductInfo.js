@@ -25,7 +25,7 @@ export default function ProductInfo() {
                             <Col xs md={9} >
                                 <a className='title ' href='#' >
                                     <FaAngleLeft className='me-2' />
-                                    Quay lại trang danh sách sản phẩm
+                                    Quay lại
                                 </a>
                             </Col>
 

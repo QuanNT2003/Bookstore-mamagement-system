@@ -33,15 +33,15 @@ export default function Product() {
                     <div >
                         <Row className='toolbar'>
                             <Col xs md={10}>
-                                <Button variant="primary" className='me-3'>
+                                <Button variant="primary" className='me-3 mb-2'>
                                     <FaFilePen className='me-2' />
                                     Nhập file
                                 </Button>{' '}
-                                <Button variant="primary" className='me-3'>
+                                <Button variant="primary" className='me-3  mb-2'>
                                     <FaPrint className='me-2' />
                                     Xuất file
                                 </Button>{' '}
-                                <Button variant="primary" className='me-3'>
+                                <Button variant="primary" className='me-3  mb-2'>
                                     <FaListUl className='me-2' />
                                     <NavLink to="/product_type" className="text-decoration-none text-white" >Loại sản phẩm</NavLink>
                                 </Button>{' '}

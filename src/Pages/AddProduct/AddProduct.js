@@ -52,7 +52,7 @@ export default function ProductAdd() {
                             <Col xs md={9} className='mt-2'>
                                 <a className='title  ' href='#' >
                                     <FaAngleLeft className='me-2' />
-                                    Quay lại trang danh sách sản phẩm
+                                    Quay lại
                                 </a>
                             </Col>
 
@@ -264,9 +264,9 @@ export default function ProductAdd() {
 
                                 <Row>
                                     <Col className='mt-4 text-end'>
-                                        <Button className='my-btn' variant="outline-primary">Thoát</Button>{' '}
-                                        <Button className='my-btn' variant="outline-primary">Lưu in mã vạch</Button>{' '}
-                                        <Button className='my-btn' variant="primary">Lưu sản phẩm </Button>{' '}
+                                        <Button className='my-btn' variant="outline-primary mb-2">Thoát</Button>{' '}
+                                        <Button className='my-btn' variant="outline-primary mb-2">Lưu in mã vạch</Button>{' '}
+                                        <Button className='my-btn' variant="primary mb-2">Lưu sản phẩm </Button>{' '}
                                     </Col>
                                 </Row>
 

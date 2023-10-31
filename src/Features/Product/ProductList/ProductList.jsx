@@ -50,7 +50,7 @@ function ProductList({ productList }) {
                     <div key={product.id} className='ProductItem pb-2'>
                         <Row className='mt-2 '>
                             <Col xs md={1} className='p-4 mt-2'><Form.Check aria-label="option 1" /></Col>
-                            <Col xs md={2} className='p-1 mt-2'>
+                            <Col xs md={3} className='p-1 mt-2'>
                                 <Container>
                                     <Row>
                                         <Col xs md={3} className='ps-0'>
